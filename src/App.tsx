@@ -1,26 +1,21 @@
+/** @jsx jsx */
+import {css, jsx} from '@emotion/core';
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {fontFamily, fontSize, gray2} from './Styles';
+import { WidgetsContainer } from "./WidgetsContainer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+const App: React.FC = () => {
+    return (
+        <div
+            css={css`
+          font-family: ${fontFamily};
+          font-size: ${fontSize};
+          color: ${gray2};
+        `}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+          <WidgetsContainer />
+        </div>
+    )
+};
 
 export default App;
